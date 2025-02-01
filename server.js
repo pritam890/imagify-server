@@ -13,9 +13,9 @@ const app = express()
 app.use(express.json())
 app.use(cors());
 
-(async () => {
-  await connectDB();
-})();
+
+await connectDB();
+
 
 app.use('/api/user', userRouter)
 app.use('/api/image', imageRouter)
